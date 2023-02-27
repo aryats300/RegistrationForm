@@ -1,1 +1,21 @@
-<p>registration-list works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataArray">
+        <td>{{ data.firstname }}</td>
+        <td>{{ data.lastname }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.gender }}</td>
+        <td>{{ data.phonenumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

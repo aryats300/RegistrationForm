@@ -33,7 +33,7 @@ ngOnInit(){
     ]),
     
   });
-  localStorage.setItem('formData', JSON.stringify(this.regForm.value));
+ 
 }
 
 
@@ -65,5 +65,6 @@ closeAlert(){
   this.alert=false
 }
 }
+
 
 

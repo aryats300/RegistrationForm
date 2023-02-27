@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistrationListComponent } from './registration-list/registration-list.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { RegistrationService } from './registration.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers:[RegistrationService]
 })
 export class AppModule { }
