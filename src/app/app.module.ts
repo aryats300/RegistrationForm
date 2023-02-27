@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-// import { HttpModule} from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { RegistrationLinkComponent } from './registration-link/registration-link.component';
+import { HeaderComponent } from './header/header.component';
+import { RegistrationListComponent } from './registration-list/registration-list.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationLinkComponent,
+    RegistrationListComponent,
     RegistrationFormComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
-    // HttpModule
-
+    AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
