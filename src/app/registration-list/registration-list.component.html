@@ -1,21 +1,25 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Age</th>
-        <th>Gender</th>
-        <th>Phone Number</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of dataArray">
-        <td>{{ data.firstname }}</td>
-        <td>{{ data.lastname }}</td>
-        <td>{{ data.age }}</td>
-        <td>{{ data.gender }}</td>
-        <td>{{ data.phonenumber }}</td>
-      </tr>
-    </tbody>
-  </table>
-  
+<h2 class="text-center mb-4">Registration List</h2>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Phone Number</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataArray">
+      <td>{{ data.firstname }}</td>
+      <td>{{ data.lastname }}</td>
+      <td>{{ data.age }}</td>
+      <td>{{ data.gender }}</td>
+      <td>{{ data.phonenumber }}</td>
+      <td><input type="time" class="form-control" [(ngModel)]="data.time" ><button type="button" class="btn btn-success" (click)="onSaveData(data)">Save</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
