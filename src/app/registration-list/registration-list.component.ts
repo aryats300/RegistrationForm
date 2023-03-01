@@ -17,20 +17,7 @@ export class RegistrationListComponent {
    
   }
   
-
-//   onSaveData(data: { firstname: any; lastname: any; time: any; }) {
-//   console.log('submit');
-//   let StoredData = JSON.parse(localStorage.getItem('formData') as string);
-
-//   for (let i = 0; i < StoredData.length; i++) {
-//     if (StoredData[i].firstname === data.firstname && StoredData[i].lastname === data.lastname) {
-//       StoredData[i].time = data.time;
-//       break;
-//     }
-//   }
-
-//   localStorage.setItem('formData', JSON.stringify(StoredData));
-// }
+/** Add time to the Registration List Table for each data */
 onSaveData(data: { id:any,time: any; }) {
   console.log('submit');
   let StoredData = JSON.parse(localStorage.getItem('formData') as string);

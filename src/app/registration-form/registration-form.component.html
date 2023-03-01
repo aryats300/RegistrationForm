@@ -50,18 +50,24 @@
   
             <div class="form-group">
               <label for="phonenumber">Phone Number</label>
-              <input type="number"  id="phonenumber" formControlName="phonenumber" class="form-control">
-              <span *ngIf="!regForm.get('phonenumber').valid && (regForm.get('phonenumber').dirty || regForm.get('phonenumber').touched)"
-              class="help-block">Please enter the Valid Phone Number!</span>
+              <input type="tel" id="phonenumber" formControlName="phonenumber" class="form-control" pattern="[0-9]{10}">
+              <span *ngIf="regForm.get('phonenumber').hasError('pattern')" class="help-block">Please enter a valid phone number.</span>
             </div>
-            <!-- <span 
-              *ngIf="!regForm.valid && regForm.touched"
-              class="help-block">Please enter the Valid data!</span> -->
+
+              <div class="form-group">
+                <label>Challenge</label><br>
+                <input type="radio" id="challenge3km" name="challenge" value="3km" formControlName="challenge"> 
+                <label for="challenge3km">3km</label><br>
+                <input type="radio" id="challenge10km" name="challenge" value="10km" formControlName="challenge">
+                <label for="challenge10km">10km</label><br>
+                <input type="radio" id="challenge15km" name="challenge" value="15km" formControlName="challenge">
+                <label for="challenge15km">15km</label>
+              </div>
 
             
         
           
-          <button class="btn btn-primary" [disabled]="!regForm.valid" type="submit">Submit</button>
+          <button class="btn btn-primary"  type="submit">Submit</button>
         </form>
       </div>
     </div>
