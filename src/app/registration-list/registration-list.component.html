@@ -8,7 +8,8 @@
       <th>Age</th>
       <th>Gender</th>
       <th>Phone Number</th>
-      <th>Time</th>
+      <th>Challenge Category</th>
+      <th>Time(min)</th>
     </tr>
   </thead>
   <tbody>
@@ -19,7 +20,7 @@
       <td>{{ data.gender }}</td>
       <td>{{ data.phonenumber }}</td>
       <td>{{ data.challenge }}</td>
-      <td><input type="time" class="form-control" [(ngModel)]="data.time" ><button type="button" class="btn btn-success" (click)="onSaveData(data)">Save</button>
+      <td><input type="number" class="form-control" [(ngModel)]="data.time" ><button type="button" class="btn btn-success" (click)="onSaveData(data)">Save</button>
       </td>
     </tr>
   </tbody>

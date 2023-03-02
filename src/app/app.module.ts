@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { RegistrationListComponent } from './registration-list/registration-list.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { RegistrationService } from './registration.service';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RegistrationService } from './registration.service';
     RegistrationListComponent,
     RegistrationFormComponent,
     HeaderComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,

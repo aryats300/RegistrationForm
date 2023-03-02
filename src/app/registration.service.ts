@@ -15,13 +15,5 @@ export class RegistrationService {
     localStorage.setItem(key, JSON.stringify(value));
   }
 
-  // getData(key: string) {
-  //   const data = localStorage.getItem(key);
-  //   return data ? JSON.parse(data) : [];
-  // }
-
-  // setData(key: string, value: any) {
-  //   localStorage.setItem(key, JSON.stringify(value));
-  // }
-
+  
 }
