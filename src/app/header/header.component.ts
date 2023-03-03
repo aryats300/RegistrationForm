@@ -8,10 +8,11 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   onLogout(){
     console.log('Logout');
+    this.authService.logout()
     this.router.navigate(['/registration-form']);
 
   }

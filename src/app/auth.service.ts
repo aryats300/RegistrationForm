@@ -14,7 +14,7 @@ export class AuthService {
 
 authUser(user: { username: string, password: string }): boolean {
   const authenticatedUser = this.User.find(u => u.email === user.username && u.password === user.password);
- 
+  
 
   if (authenticatedUser) {
     localStorage.setItem('adminUser', JSON.stringify(this.email));
@@ -23,9 +23,15 @@ authUser(user: { username: string, password: string }): boolean {
   return false;
 }
 
+getCurrentUser() {
+  return JSON.parse(localStorage.getItem('adminUser') as string);
+}
 
+loggedIn() {
+  return this.getCurrentUser() !== null;
+}
 
 logout() {
-  localStorage.removeItem('User');
+  localStorage.removeItem('adminUser');
 }
 }

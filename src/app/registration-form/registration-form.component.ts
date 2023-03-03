@@ -34,8 +34,6 @@ ngOnInit(){
  
 }
 
-
-
 onSubmit() {
   if (this.regForm.valid) {
     let formDataArray = JSON.parse(localStorage.getItem('formData')) || [];
