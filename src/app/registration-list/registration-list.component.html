@@ -9,7 +9,8 @@
       <th>Gender</th>
       <th>Phone Number</th>
       <th>Challenge Category</th>
-      <th>Time(min)</th>
+      <th>Photo</th>
+      <th>Time (min)</th>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +21,16 @@
       <td>{{ data.gender }}</td>
       <td>{{ data.phonenumber }}</td>
       <td>{{ data.challenge }}</td>
-      <td><input type="number" class="form-control" [(ngModel)]="data.time" ><button type="button" class="btn btn-success" (click)="onSaveData(data)">Save</button>
+      <td>
+        <img [src]="data.image" alt="User photo" style="width:100px;height:100px;">
+        <input type="file" class="form-control" (change)="onFileSelected($event, data)">
+
+        <!-- <button type="button" class="btn btn-success" (click)="onSaveImage(data)">Save</button> -->
+      </td>
+      <td>
+        <input type="number" class="form-control" [(ngModel)]="data.time">
+      </td>
+      <td><button type="button" class="btn btn-success" (click)="onSaveData(data)">Save</button>
       </td>
     </tr>
   </tbody>
