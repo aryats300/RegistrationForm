@@ -5,15 +5,14 @@ import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) {}
 
-  onLogout(){
+  onLogout() {
     console.log('Logout');
+    this.authService.logout();
     this.router.navigate(['/registration-form']);
-
   }
-
 }
